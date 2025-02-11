@@ -1,0 +1,109 @@
+.button {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  background: var(--Primitive-Default);
+  color: var(--Primitive-0);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 2px solid #fd8c3e;
+  background: linear-gradient(180deg, #fd8e3d 0%, #fd572d 100%);
+  box-shadow: 0px 0px 32px 0px rgba(253, 139, 61, 0.5),
+    0px 0px 32px 0px rgba(253, 139, 61, 0.5) inset;
+}
+.radiusSm {
+  border-radius: 8px;
+}
+.glow {
+  border-radius: 999px;
+  border: 2px solid #fd8c3e;
+  background: #000;
+  box-shadow: 0px 0px 32px 0px rgba(253, 139, 61, 0.5),
+    0px 0px 32px 0px rgba(253, 139, 61, 0.5) inset;
+  color: var(--Primitive-0);
+}
+
+.radius {
+  border-radius: 24px;
+}
+.base {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+.lg {
+  font-size: 18px;
+  padding: 12px 20px;
+}
+.primitive800 {
+  background: var(--Primitive-800);
+  color: var(--Primitive-400);
+}
+.btnPrimary {
+  background: var(--Primitive-Default);
+  color: var(--Primitive-950);
+}
+
+.transparent {
+  background: transparent;
+  color: var(--Primitive-0);
+  padding: 0;
+  text-transform: capitalize;
+  border: none;
+  box-shadow: none;
+}
+.primitiveTransparent8 {
+  background: var(--Primitive-Transparent-8);
+  color: var(--Primitive-Default);
+}
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.loading {
+  gap: 8px;
+  opacity: 0.6;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .button {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  .transparent {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  .transparent {
+    padding: 0;
+  }
+}

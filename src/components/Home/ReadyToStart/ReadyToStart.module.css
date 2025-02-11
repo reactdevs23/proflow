@@ -1,0 +1,21 @@
+.container {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 32px;
+  background: url(../../../images/pattern2.svg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-size: cover;
+  background-position: bottom center;
+  margin: 20px auto;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    padding: 24px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  background: var(--Input-Bg);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.iconContainer {
+  max-width: 40px;
+  border-radius: 6px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Primitive-950);
+}
+.icon {
+  max-width: 20px;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.button {
+  color: var(--Primitive-Default);
+  font-size: 14px;
+  gap: 4px;
+}

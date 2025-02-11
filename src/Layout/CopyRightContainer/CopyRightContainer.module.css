@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.copyRightAndPrivacy,
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.privacyPolicy {
+  color: var(--Primitive-0);
+  opacity: 0.5;
+}
+.copyRight {
+  opacity: 0.3;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.icon {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .copyRightAndPrivacy,
+  .socialContainer {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

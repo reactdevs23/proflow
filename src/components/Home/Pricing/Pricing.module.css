@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.topHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+.header {
+  max-width: 485px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  width: 100%;
+}
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.discount {
+  border-radius: 8px;
+  padding: 8px;
+  background: rgb(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px;
+  width: 100%;
+}
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.popular {
+  border-radius: 8px;
+  background: var(--Primitive-Default);
+  padding: 6px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+.duration {
+  font-size: 32px;
+}
+.price {
+  opacity: 0.9;
+}
+/* services */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.feature {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  gap: 8px;
+}
+.icon {
+  font-size: 18px;
+  margin-top: 3px;
+  opacity: 0.6;
+}
+.button {
+  margin-top: 12px;
+}
+.popularCard {
+  background: url(../../../images/pattern.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+
+  padding: 48px 24px;
+}
+@media only screen and (max-width: 1199px) {
+  .duration {
+    gap: 28px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    gap: 32px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .topHeader {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .header {
+    align-items: center;
+    margin: 0 auto;
+  }
+  .header .title,
+  .header .heading,
+  .header .info {
+    text-align: center;
+  }
+  .toggleContainer {
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .duration {
+    gap: 24px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .duration {
+    gap: 20px;
+  }
+}

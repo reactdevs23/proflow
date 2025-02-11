@@ -1,0 +1,136 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  transition: 0.3s;
+  padding: 16px 0;
+
+  min-height: 90px;
+
+  backdrop-filter: blur(5px);
+
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.wrapperBg {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7) 50.9009%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 10px 0;
+}
+
+.logo {
+  max-width: 103px;
+  width: 100%;
+}
+
+.navItems,
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  width: 100%;
+}
+.buttonContainer {
+  margin-left: auto;
+  width: auto;
+  gap: 4px;
+}
+.navItem {
+  color: var(--Primitive-0);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  opacity: 0.5;
+}
+.navActive {
+  color: var(--Primitive-Default);
+}
+
+.mobileButton {
+  justify-content: flex-end;
+  gap: 20px;
+  display: none;
+}
+
+.mobileButton .button {
+  gap: 5px;
+}
+
+.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    min-height: 70px;
+    padding: 10px 0;
+  }
+  .navItems {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    min-height: 100vh;
+    background: var(--Primitive-950);
+    transform: translateX(250%);
+    transition: 0.3s;
+    position: fixed;
+    top: calc(100% + 1px);
+    right: 0;
+    padding-top: 30px;
+    padding-left: 50px;
+    max-width: 320px;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+
+  .mobileButton {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+  .buttonContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+    gap: 14px;
+  }
+  .icon {
+    display: block;
+    cursor: pointer;
+    color: var(--Primitive-0);
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .mobileButton .button {
+    padding: 8px 12px;
+  }
+}

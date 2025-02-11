@@ -1,0 +1,81 @@
+.container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  background: var(--Input-Bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mined,
+.plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.engaged {
+  background-color: var(--Primitive-950);
+  padding: 12px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.engagedTitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.engagedData {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.driver,
+.miner {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.count {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--Primitive-0);
+  line-height: 100%;
+}
+
+.role {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.loading {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.loadingValue {
+  color: var(--Success);
+}

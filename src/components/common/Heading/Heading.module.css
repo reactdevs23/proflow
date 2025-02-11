@@ -1,0 +1,180 @@
+.heading {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  font-size: 30px;
+  color: var(--Primitive-0);
+}
+.gradient {
+  background: var(
+    --Gradient-1,
+    linear-gradient(90deg, #fff 1.63%, rgba(255, 255, 255, 0) 130.32%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.primitiveDefault {
+  color: var(--Primitive-Default);
+}
+.primitive0 {
+  color: var(--Primitive-0);
+}
+.primitive200 {
+  color: var(--Primitive-200);
+}
+.primitive300 {
+  color: var(--Primitive-300);
+}
+.primitive400 {
+  color: var(--Primitive-400);
+}
+.primitive500 {
+  color: var(--Primitve-500);
+}
+.primitive600 {
+  color: var(--Primitive-600);
+}
+.primitive900 {
+  color: var(--Primitive-900);
+}
+.primitive950 {
+  color: var(--Primitive-950);
+}
+.primitive700 {
+  color: var(--Primitive-700);
+}
+.primitive800 {
+  color: var(--Primitive-800);
+}
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+  line-height: 115%;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 32px;
+}
+.xl4 {
+  font-size: 40px;
+}
+.xl5 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+}
+.xl6 {
+  font-size: 64px;
+  letter-spacing: -1.92px;
+}
+.xl7 {
+  font-size: 80px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1280px) {
+  .xl7 {
+    font-size: 72px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .xl6 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+  .xl7 {
+    font-size: 60px;
+  }
+  .xl5 {
+    font-size: 40px;
+    letter-spacing: -0.9px;
+  }
+  .xl4 {
+    font-size: 36px;
+  }
+  .xl3 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 767px) {
+  .xl6 {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+  }
+  .xl7 {
+    font-size: 48px;
+  }
+  .xl5 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+  .xl4 {
+    font-size: 28px;
+  }
+  .xl3 {
+    font-size: 24px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .xl7 {
+    font-size: 40px;
+  }
+  .xl6 {
+    font-size: 36px;
+    letter-spacing: -0.3px;
+  }
+  .xl5 {
+    font-size: 28px;
+    letter-spacing: -0.3px;
+  }
+  .xl4 {
+    font-size: 28px;
+  }
+  .xl3 {
+    font-size: 20px;
+  }
+  .lg {
+    font-size: 16px;
+  }
+}

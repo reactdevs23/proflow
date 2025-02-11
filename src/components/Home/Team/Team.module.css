@@ -1,0 +1,228 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+.header {
+  max-width: 485px;
+  margin-bottom: 60px;
+}
+
+.img {
+  width: 100%;
+}
+.teamMembers {
+  display: flex;
+  overflow: hidden;
+}
+
+.teamMembers {
+  display: flex;
+
+  gap: 8px;
+  align-items: flex-start;
+}
+.team {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  width: 150px;
+  overflow: hidden;
+  transition: flex-grow 0.5s ease-in-out, width 0.5s ease-in-out, opacity 0.3s;
+
+  align-self: stretch;
+  flex: 1 0 0 0px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.team.active {
+  max-width: 384px;
+  width: 100%;
+  flex: 3 0 0px;
+  align-self: uns;
+}
+.team {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out, mask-image 0.5s ease-in-out, opacity 0.3s;
+  cursor: pointer;
+  flex-basis: 150px; /* Default smaller size */
+  flex-grow: 1; /* Allow shrinking */
+
+  mask-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 32.8829%,
+    rgb(0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0) 32.8829%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.team.active {
+  flex-basis: 384px; /* Expand the active card */
+  flex-grow: 0; /* Prevent others from growing */
+
+  mask-image: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    rgb(0, 0, 0) 0%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+.imgContainer {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 8px;
+  width: max-content;
+  aspect-ratio: 1/1;
+}
+.img {
+  max-width: 184px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+}
+.nameAndPositon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.detailsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  width: 100%;
+}
+.socialMediaContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.icon {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sellAllContainer {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.arrow {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+}
+.teamMemberImages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.teamMemberImgContainer {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 2px;
+  width: max-content;
+  aspect-ratio: 1/1;
+}
+.teamMemberImg {
+  max-width: 40px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: block;
+}
+.seeAllButton {
+  gap: 4px;
+}
+@media only screen and (max-width: 1199px) {
+  .teamMembers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .team,
+  .team.active {
+    mask-image: none;
+    mask: unset;
+    width: auto;
+    max-width: 100%;
+  }
+  .team {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 6px;
+  }
+  .detailsContainer {
+    align-items: center;
+    width: 100%;
+  }
+  .imgContainer {
+    max-width: 96px;
+    padding: 4px;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .position {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .header {
+    margin-bottom: 24px;
+  }
+  .teamMembers {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .sellAllContainer {
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .teamMemberImages {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .team,
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .imgContainer {
+    max-width: 120px;
+  }
+  .name,
+  .position {
+    text-align: center;
+  }
+}

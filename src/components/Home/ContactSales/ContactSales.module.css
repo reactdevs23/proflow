@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  color: rgb(255, 255, 255, 0.5);
+}
+.contactSalesButton {
+  color: var(--Primitive-0);
+}

@@ -1,0 +1,18 @@
+.container {
+  max-width: 799px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.partners {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px 80px;
+  flex-wrap: wrap;
+}
+.logo {
+  max-width: 91px;
+  display: block;
+  width: 100%;
+}
