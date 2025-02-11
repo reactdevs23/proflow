@@ -62,7 +62,7 @@ const Chart = ({ data }) => {
                   </text>
                   <text
                     x={cx}
-                    y={cy + 16}
+                    y={cy + 18}
                     textAnchor="middle"
                     dominantBaseline="central"
                     fontSize={12}

@@ -50,6 +50,11 @@ import getStartImg from "./getStart.svg";
 import overviewIcon from "./dashboard/overviewIcon.svg";
 import devicesIcon from "./dashboard/devicesIcon.svg";
 
+// miners
+import mint1 from "./dashboard/miners/mint1.svg";
+import mint2 from "./dashboard/miners/mint2.svg";
+import mint3 from "./dashboard/miners/mint3.svg";
+
 export {
   logo,
   ray,
@@ -96,4 +101,8 @@ export {
   // dashboard
   overviewIcon,
   devicesIcon,
+  // miners
+  mint1,
+  mint2,
+  mint3,
 };
