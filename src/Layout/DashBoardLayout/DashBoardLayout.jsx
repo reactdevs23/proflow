@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
-import classes from "./DashBoardLayout";
-import Footer from "Layout/Footer/Footer";
+
 import Navbar from "./Navbar/Navbar";
 import { useState } from "react";
 import ChangePassword from "components/Authentication/ForgotPassword/ForgotPassword/ForgotPassword";

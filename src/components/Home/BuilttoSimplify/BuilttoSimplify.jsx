@@ -8,7 +8,7 @@ import {
   intutiveLayoutIcon,
   reduceHumanErrorIcon,
 } from "images";
-import { Heading, Text } from "components/common";
+import { Text } from "components/common";
 
 const BuilttoSimplify = () => {
   const data = [

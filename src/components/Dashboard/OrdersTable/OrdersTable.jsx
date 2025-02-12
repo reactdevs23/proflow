@@ -3,11 +3,10 @@ import clsx from "clsx";
 import classes from "./OrdersTable.module.css";
 import { isAfter, isEqual, parse } from "date-fns";
 import SingleRow from "./SingleRow";
-import { mint1, mint2 } from "images";
+
 import { Dropdown, DatePicker, Pagination, Text } from "components/common";
 import { TbCaretUpDownFilled } from "react-icons/tb";
 
-const allTypes = ["All", "Local", "Cloud"];
 const allStatus = ["All", "Completed"];
 
 const OrdersTable = ({ searchValue, setSearchValue }) => {

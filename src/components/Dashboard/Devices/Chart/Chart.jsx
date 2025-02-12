@@ -1,5 +1,5 @@
 import React from "react";
-import { PieChart, Pie, Tooltip, Legend, Cell, Label } from "recharts";
+import { PieChart, Pie, Tooltip, Cell, Label } from "recharts";
 import classes from "./Chart.module.css";
 import { Text } from "components/common";
 const Chart = ({ data }) => {

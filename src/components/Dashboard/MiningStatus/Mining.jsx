@@ -6,7 +6,7 @@ import { numberFormat } from "utils/utils";
 const MiningStatus = () => {
   const info = { mined: 49976, plan: 75000, driver: 318, miner: 296 };
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-aos="fade-up">
       <div className={classes.header}>
         <div className={classes.mined}>
           <Text base opacity50>

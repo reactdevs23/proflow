@@ -1,8 +1,7 @@
 import { Button, Heading, Text } from "components/common";
 import classes from "./Devices.module.css";
 import { devicesIcon } from "images";
-import { FaArrowUp } from "react-icons/fa6";
-import clsx from "clsx";
+
 import Chart from "./Chart/Chart";
 import { MdChevronRight } from "react-icons/md";
 const Devices = () => {
@@ -12,7 +11,7 @@ const Devices = () => {
     { name: "Mobile", value: 31.0 },
   ];
   return (
-    <div className={classes.container}>
+    <div className={classes.container} data-aos="fade-up">
       <div className={classes.header}>
         <Heading medium lg>
           Devices
