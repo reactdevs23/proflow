@@ -12,13 +12,13 @@ const TextReveal = ({ text }) => {
   };
 
   return (
-    <motion.div initial="hidden" animate="visible">
+    <motion.span initial="hidden" animate="visible">
       {text.split("").map((char, index) => (
         <motion.span key={index} custom={index} variants={letterVariants}>
           {char}
         </motion.span>
       ))}
-    </motion.div>
+    </motion.span>
   );
 };
 

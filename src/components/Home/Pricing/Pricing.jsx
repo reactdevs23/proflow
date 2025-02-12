@@ -57,6 +57,7 @@ const Pricing = () => {
 
   return (
     <section
+      data-aos="fade-up"
       className={clsx(classes.container, "container sectionPadding pattern")}
     >
       <div className={classes.topHeader}>

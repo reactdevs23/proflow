@@ -36,7 +36,10 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      className={[classes.wrapper, isScrolled && classes.wrapperBg].join(" ")}
+      className={[
+        classes.wrapper,
+        (isScrolled || sidebar) && classes.wrapperBg,
+      ].join(" ")}
     >
       <header className={clsx(classes.header, "container")}>
         <NavLink

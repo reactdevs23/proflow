@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import ray from "./ray.svg";
-import heroImg from "./heroImg.png";
+import heroImg from "./heroImg.svg";
 // authentication
 import successImg from "./success.svg";
 // partner
@@ -11,9 +11,9 @@ import elementLogo from "./partners/element.svg";
 import scaler from "./partners/scaler.svg";
 
 //powerfulAutomation
-import automationImg from "./automation.svg";
-import easyInterfaceImg from "./easyInterface.svg";
-import realtimeAnalyticsImg from "./realtimeAnalytics.svg";
+import automationImg from "./automation.png";
+import easyInterfaceImg from "./easyInterface.png";
+import realtimeAnalyticsImg from "./realtimeAnalytics.png";
 
 // build to simplify
 import automateKeyProcessIcon from "./automateKeyProcess.svg";

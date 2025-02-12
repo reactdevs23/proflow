@@ -37,7 +37,7 @@ const HeroImage = () => {
     };
   }, []);
 
-  const threshold = 200; // Scroll limit to reach final position
+  const threshold = 170; // Scroll limit to reach final position
   let progress = 1 - Math.min(scrollY / threshold, 1); // Reverse progress from 1 to 0 based on scroll
 
   // Calculate the transform dynamically based on scroll position

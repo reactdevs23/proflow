@@ -21,7 +21,7 @@ function App() {
       debounceDelay: 50,
       throttleDelay: 99,
       // Animation settings:
-      offset: 500,
+      offset: 300,
       delay: 0,
       duration: 1000,
       easing: "ease",
