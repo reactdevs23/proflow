@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import clsx from "clsx";
 import { FaCheck } from "react-icons/fa";
 
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import classes from "./Dropdown.module.css";
 
 import useOnClickOutside from "../../../hooks";

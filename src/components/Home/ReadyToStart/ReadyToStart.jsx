@@ -4,9 +4,11 @@ import { Button, Heading } from "components/common";
 
 const ReadyToStart = () => {
   return (
-    <div className={clsx(classes.container, "container  ")}>
+    <div className={clsx(classes.container, "container  ")} data-aos="fade-up">
       <Heading xl3>Ready To Get Started?</Heading>
-      <Button glow>Sign Up for Free</Button>
+      <Button glow to="sign-up">
+        Sign Up for Free
+      </Button>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import clsx from "clsx";
-import classes from "./LiveMiners.module.css";
+import classes from "./OrdersTable.module.css";
 import { isAfter, isEqual, parse } from "date-fns";
 import SingleRow from "./SingleRow";
 import { mint1, mint2 } from "images";
@@ -8,106 +8,106 @@ import { Dropdown, DatePicker, Pagination, Text } from "components/common";
 import { TbCaretUpDownFilled } from "react-icons/tb";
 
 const allTypes = ["All", "Local", "Cloud"];
-const allStatus = ["All", "Active", "Completed"];
+const allStatus = ["All", "Completed"];
 
-const LiveMiners = ({ searchValue, setSearchValue }) => {
+const OrdersTable = ({ searchValue, setSearchValue }) => {
   const originalData = useMemo(
     () => [
       {
-        id: 1,
-        img: mint1,
-        type: "Local",
-        coinsPerMin: "200",
-        status: "Active",
+        minersId: "#1234567815",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
+      },
+      {
+        minersId: "#1234567814",
+        price: "20 USD",
+        status: "Pending",
         createdOn: "11/12/2023",
       },
       {
-        id: 2,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
+        minersId: "#1234567813",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
+      },
+      {
+        minersId: "#1234567812",
+        price: "20 USD",
+        status: "Pending",
         createdOn: "11/12/2023",
       },
       {
-        id: 3,
-        img: mint1,
-        type: "Local",
-        coinsPerMin: "200",
-        status: "Active",
-        createdOn: "10/12/2023",
+        minersId: "#1234567811",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
       {
-        id: 4,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "09/12/2023",
+        minersId: "#1234567810",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
       {
-        id: 5,
-        img: mint1,
-        type: "Local",
-        coinsPerMin: "200",
-        status: "Active",
-        createdOn: "08/12/2023",
+        minersId: "#1234567899",
+        price: "20 USD",
+        status: "Pending",
+        createdOn: "11/12/2023",
       },
       {
-        id: 6,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567898",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
       {
-        id: 7,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567897",
+        price: "20 USD",
+        status: "Pending",
+        createdOn: "11/12/2023",
       },
       {
-        id: 8,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567896",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
       {
-        id: 9,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567895",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
       {
-        id: 10,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567894",
+        price: "20 USD",
+        status: "Pending",
+        createdOn: "11/12/2023",
       },
       {
-        id: 11,
-        img: mint2,
-        type: "Cloud",
-        coinsPerMin: "240",
-        status: "Completed",
-        createdOn: "07/12/2023",
+        minersId: "#1234567893",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
+      },
+      {
+        minersId: "#1234567892",
+        price: "20 USD",
+        status: "Pending",
+        createdOn: "11/12/2023",
+      },
+      {
+        minersId: "#1234567891",
+        price: "10 USD",
+        status: "Paused",
+        createdOn: "10/12/2024",
       },
     ],
     []
   );
 
   // Dropdown States
-  const [showTypeDropdown, setShowTypeDropdown] = useState(false);
-  const [currentType, setCurrentType] = useState("All");
 
   const [showStatusDropdown, setShowStatusDropdown] = useState(false);
   const [currentStatus, setCurrentStatus] = useState("All");
@@ -116,7 +116,7 @@ const LiveMiners = ({ searchValue, setSearchValue }) => {
 
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 8;
+  const itemsPerPage = 10;
 
   // Inside your filteredData useMemo
   const filteredData = useMemo(() => {
@@ -126,17 +126,16 @@ const LiveMiners = ({ searchValue, setSearchValue }) => {
       const filterDate = createdOn ? new Date(createdOn) : null;
 
       return (
-        (currentType === "All" || miner.type === currentType) &&
         (currentStatus === "All" ||
           miner.status.toLowerCase() === currentStatus.toLowerCase()) &&
         (!filterDate ||
           isAfter(minerDate, filterDate) ||
           isEqual(minerDate, filterDate)) && // Show dates on or after the selected day
         (!searchValue ||
-          miner.type.toLowerCase().includes(searchValue.toLowerCase()))
+          miner.minersId.toLowerCase().includes(searchValue.toLowerCase()))
       );
     });
-  }, [originalData, currentType, currentStatus, createdOn, searchValue]);
+  }, [originalData, currentStatus, createdOn, searchValue]);
 
   // ✅ **Apply Pagination After Filtering**
   const currentTableData = useMemo(() => {
@@ -146,28 +145,19 @@ const LiveMiners = ({ searchValue, setSearchValue }) => {
   }, [filteredData, currentPage, itemsPerPage]);
 
   return (
-    <section className={clsx(classes.wrapper, "container")}>
+    <section className={clsx(classes.wrapper, "container overflow")}>
       <div className={clsx(classes.tableContainer)}>
         <table className={classes.table}>
           <thead>
             <tr>
               <th>
-                <Dropdown
-                  label="Miner Type"
-                  className={classes.filterDropdown}
-                  items={allTypes}
-                  isActive={showTypeDropdown}
-                  setIsActive={setShowTypeDropdown} // ✅ Controls visibility
-                  selectedValue={currentType}
-                  onSelect={(val) => {
-                    setCurrentType(val);
-                    setShowTypeDropdown(false); // Close after selection
-                  }}
-                />
+                <div className={classes.heading}>
+                  Miner ID <TbCaretUpDownFilled />
+                </div>
               </th>
               <th>
                 <div className={classes.heading}>
-                  Coins per min. <TbCaretUpDownFilled />
+                  Price <TbCaretUpDownFilled />
                 </div>
               </th>
               <th>
@@ -196,15 +186,15 @@ const LiveMiners = ({ searchValue, setSearchValue }) => {
           </thead>
           <tbody>
             {currentTableData.length > 0 ? (
-              currentTableData.map((miner) => (
-                <SingleRow key={miner.id} {...miner} />
+              currentTableData.map((miner, id) => (
+                <SingleRow key={id} {...miner} />
               ))
             ) : (
               <tr className={classes.noItemContainer}>
                 <td colSpan="5">
                   <Text primitive0 textCenter className={classes.noItem}>
                     {" "}
-                    No miners found
+                    No Orders found
                   </Text>
                 </td>
               </tr>
@@ -226,4 +216,4 @@ const LiveMiners = ({ searchValue, setSearchValue }) => {
   );
 };
 
-export default LiveMiners;
+export default OrdersTable;

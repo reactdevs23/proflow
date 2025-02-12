@@ -38,7 +38,10 @@ const Faq = () => {
   ];
   return (
     <>
-      <section className={clsx(classes.container, "container sectionPadding")}>
+      <section
+        data-aos="fade-up"
+        className={clsx(classes.container, "container sectionPadding")}
+      >
         <Heading xl5 className={classes.heading}>
           Quick Answers
         </Heading>

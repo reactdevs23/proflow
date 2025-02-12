@@ -10,8 +10,8 @@ const Chart = ({ data }) => {
   return (
     <div className={classes.wrapper}>
       <PieChart
-        width={250}
-        height={250}
+        width={200}
+        height={200}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       >
         <Pie
@@ -19,7 +19,7 @@ const Chart = ({ data }) => {
           cx="50%"
           cy="50%"
           innerRadius={60}
-          outerRadius={120}
+          outerRadius={100}
           fill="#8884d8"
           paddingAngle={1}
           dataKey="value"
@@ -35,8 +35,8 @@ const Chart = ({ data }) => {
                 fill={TEXT_COLORS[index % TEXT_COLORS.length]}
                 textAnchor="middle"
                 dominantBaseline="central"
-                fontFamily="Outfit"
-                fontSize={14}
+                fontFamily="Inter"
+                fontSize={12}
               >
                 {`${data[index].value.toFixed(1)}%`}
               </text>
@@ -50,7 +50,7 @@ const Chart = ({ data }) => {
                 <g>
                   <text
                     x={cx}
-                    y={cy}
+                    y={cy - 8}
                     textAnchor="middle"
                     dominantBaseline="central"
                     fontSize={16}
@@ -62,7 +62,7 @@ const Chart = ({ data }) => {
                   </text>
                   <text
                     x={cx}
-                    y={cy + 18}
+                    y={cy + 12}
                     textAnchor="middle"
                     dominantBaseline="central"
                     fontSize={12}

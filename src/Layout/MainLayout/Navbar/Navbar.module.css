@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 32px;
   width: 100%;
 }
 .buttonContainer {
@@ -61,6 +61,12 @@
   font-weight: 500;
   line-height: 150%;
   opacity: 0.5;
+  transition: 0.3s;
+}
+.navItem:hover {
+  transform: translateY(-3px);
+
+  opacity: 1;
 }
 .navActive {
   color: var(--Primitive-Default);

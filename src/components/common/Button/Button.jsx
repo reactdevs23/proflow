@@ -22,7 +22,7 @@ const Button = ({
   lg,
   radius,
   radiusSm,
-
+  dataAos,
   ...rest
 }) => {
   return (
@@ -30,6 +30,7 @@ const Button = ({
       {onClick ? (
         <button
           {...rest}
+          data-aos={dataAos}
           className={clsx(
             className,
             classes.button,
@@ -59,6 +60,7 @@ const Button = ({
       ) : href ? (
         <a
           {...rest}
+          data-aos={dataAos}
           className={clsx(
             className,
             classes.button,
@@ -89,6 +91,7 @@ const Button = ({
       ) : to ? (
         <Link
           {...rest}
+          data-aos={dataAos}
           className={clsx(
             className,
             classes.button,
@@ -117,6 +120,7 @@ const Button = ({
       ) : (
         <button
           {...rest}
+          data-aos={dataAos}
           className={clsx(
             className,
             classes.button,

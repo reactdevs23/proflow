@@ -11,6 +11,12 @@ import CheckBox from "./CheckBox/CheckBox";
 import ProgressBar from "./ProgressBar/ProgressBar";
 import TextArea from "./TextArea/TextArea";
 
+import Pagination from "./Pagination/Pagination";
+import Dropdown from "./Dropdown/Dropdown";
+import DatePicker from "./DatePicker/DatePicker";
+import Header from "./Header/Header";
+import Switch from "./Switch/Switch";
+
 export {
   Wrapper,
   Button,
@@ -23,4 +29,9 @@ export {
   CheckBox,
   ProgressBar,
   TextArea,
+  Pagination,
+  Header,
+  DatePicker,
+  Dropdown,
+  Switch,
 };

@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: auto;
+}
+.wFull {
   width: 100%;
 }
-
 .label {
   color: var(--Primitive-0);
   opacity: 0.5;
@@ -27,6 +29,8 @@
 
 .searchIconInputContainer {
   padding: 10px 12px;
+  display: grid;
+  grid-template-columns: auto 1fr 20px;
 }
 
 .searchIcon {

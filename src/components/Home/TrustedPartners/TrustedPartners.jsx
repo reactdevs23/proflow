@@ -40,10 +40,10 @@ const TrustedPartners = () => {
 
   return (
     <div className={clsx(classes.container, "container", "sectionPadding")}>
-      <Text lg opacity50 textCenter>
+      <Text lg opacity50 textCenter data-aos="fade-up">
         Trusted by companies worldwide
       </Text>
-      <div className={classes.partners}>
+      <div className={classes.partners} data-aos="fade-up">
         {partners
           .slice(startIndex, startIndex + itemsPerPage)
           .map((partner, i) => (

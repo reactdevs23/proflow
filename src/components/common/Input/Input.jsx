@@ -24,7 +24,7 @@ const Input = ({
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <div className={classes.wrapper}>
+    <div className={clsx(classes.wrapper, !search && classes.wFull)}>
       {label && (
         <label htmlFor="input" className={classes.label}>
           {label}

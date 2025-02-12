@@ -1,3 +1,89 @@
 .react-datepicker-wrapper {
   width: 100%;
 }
+.react-datepicker__input-container {
+  cursor: pointer !important;
+}
+/* Apply dark background */
+.react-datepicker {
+  background-color: #222 !important;
+  border: 1px solid #444 !important;
+  color: #fff !important;
+}
+
+/* Header (Month/Year selection) */
+.react-datepicker__header {
+  background-color: #333 !important;
+  border-bottom: 1px solid #555 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: #fff !important;
+}
+
+/* Day and Weekday Names */
+.react-datepicker__day,
+.react-datepicker__day-name {
+  color: #ddd !important;
+}
+
+/* Hover effect */
+.react-datepicker__day:hover,
+.react-datepicker__day--selected {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+/* Navigation buttons */
+.react-datepicker__navigation {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.react-datepicker__navigation:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Month/Year dropdown */
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+  background-color: #222 !important;
+  border: 1px solid #555 !important;
+}
+
+.react-datepicker__month-option,
+.react-datepicker__year-option {
+  background-color: #222 !important;
+  color: #fff !important;
+}
+
+.react-datepicker__month-option:hover,
+.react-datepicker__year-option:hover {
+  background-color: #444 !important;
+}
+
+/* Selected Day */
+.react-datepicker__day--selected {
+  background-color: var(--Primitive-Default) !important;
+  color: #fff !important;
+}
+
+/* Disabled Days */
+.react-datepicker__day--disabled {
+  color: #666 !important;
+  cursor: not-allowed !important;
+}
+
+/* Remove small triangle arrow */
+.react-datepicker__triangle {
+  display: none !important;
+}
+.react-datepicker__day--keyboard-selected {
+  color: #000 !important;
+}
+.react-datepicker__day--today {
+  color: #000 !important;
+  background: #ddd;
+}

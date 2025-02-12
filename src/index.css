@@ -20,7 +20,7 @@
   --Primtive-Default-Transparent-8: rgba(252, 138, 71, 0.08);
   --Primitive-0: #fff;
   --Primitive-Light-3: #ffffff08;
-  --Primitive-Light-3: #ffffff0f;
+  --Primitive-Light-6: #ffffff0f;
   --Primitive-100: #131315;
   --Primitive-700: #d9d9d9;
   --Primitive-900: #919191;
@@ -37,7 +37,8 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
-  font-family: "Urbanist", serif;
+
+  font-family: "Inter", serif;
   font-optical-sizing: auto;
 
   font-style: normal;
@@ -119,7 +120,7 @@ button:hover {
 
 .overflow::-webkit-scrollbar-thumb {
   background: var(--Primitive-600);
-  border-radius: 100vh;
+
   border: none;
   border-radius: 5px;
 }
@@ -136,4 +137,8 @@ input[type="number"] {
 }
 input::placeholder {
   color: var(--Primitive-600);
+}
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
 }

@@ -28,6 +28,9 @@
   position: relative;
   z-index: 1;
   padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .infoContainer {
@@ -47,19 +50,25 @@
 .button {
   margin-top: 6px;
 }
+.imgContainer {
+  width: 100%;
+  aspect-ratio: 1088/511.8px;
+  height: 400px;
+  position: relative;
+  max-width: 1088px;
+}
 .heroImg {
-  position: static;
   top: 0;
   /* left: 50%;
   transform: translateX(-50%); */
   will-change: transform;
   opacity: 1;
   z-index: -1;
-  max-width: 1088px;
+  width: 100%;
   display: block;
   margin: 0 auto;
   right: 0;
-
+  transition: 1s ease;
   -webkit-mask: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0) 6.756756756756757%,

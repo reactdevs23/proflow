@@ -14,7 +14,10 @@ const ContactSales = () => {
     { name: "SCALER", logo: scaler, link: "#" },
   ];
   return (
-    <section className={clsx(classes.container, "container")}>
+    <section
+      className={clsx(classes.container, "container")}
+      data-aos="fade-up"
+    >
       <Text lg className={classes.heading} textCenter>
         Need an enterprise solution?{" "}
         <Link to="/contact-sales" className={classes.contactSalesButton}>

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { IoIosMore } from "react-icons/io";
-import { Text } from "components/common";
 import { IoMdMore } from "react-icons/io";
-
-import classes from "./LiveMiners.module.css";
+import { Text } from "components/common";
+import { format, parse } from "date-fns"; // Import format and parse functions
 import Dropdown from "components/common/Dropdown/Dropdown";
 import clsx from "clsx";
+
+import classes from "./LiveMiners.module.css";
 
 // Define possible actions
 const actionsName = ["View", "Paused", "Stop", "Delete"];
@@ -13,6 +13,11 @@ const actionsName = ["View", "Paused", "Stop", "Delete"];
 const SingleRow = ({ img, type, coinsPerMin, status, createdOn }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [actionName, setActionName] = useState("");
+
+  // Format the createdOn date as "14-Aug-2023"
+  const formattedDate = createdOn
+    ? format(parse(createdOn, "MM/dd/yyyy", new Date()), "dd-MMM-yyyy")
+    : "";
 
   return (
     <>
@@ -45,12 +50,11 @@ const SingleRow = ({ img, type, coinsPerMin, status, createdOn }) => {
         </td>
         <td>
           <Text sm className={classes.item}>
-            {createdOn}
+            {formattedDate}
           </Text>
         </td>
 
         <td>
-          {" "}
           <Dropdown
             className={classes.actionDropdown}
             type2

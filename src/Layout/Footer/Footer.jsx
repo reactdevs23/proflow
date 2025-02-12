@@ -17,7 +17,7 @@ const Footer = () => {
     <section className={clsx(classes.container, "container")}>
       <footer className={clsx(classes.footer)}>
         <Link to="/">
-          <img src={logo} alt="#" className={classes.logo} />
+          <img src={logo} alt="Proflow" className={classes.logo} />
         </Link>
 
         <nav className={[classes.navItems].join(" ")}>

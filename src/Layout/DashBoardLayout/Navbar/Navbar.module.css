@@ -1,0 +1,79 @@
+.wrapper {
+  background: var(--Input-Bg);
+  padding: 22px 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.logo {
+  max-width: 103px;
+  width: 100%;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttonContainer .button {
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.buttonContainer .settingButton {
+  background: var(--Primitive-Light-6);
+  padding: 10px;
+  border-radius: 6px;
+}
+.buttonContainer .settingIcon {
+  color: #fff;
+  font-size: 18px;
+}
+.mobileButton {
+  display: none;
+}
+@media only screen and (max-width: 520px) {
+  .buttonContainer {
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--Input-Bg);
+    transform: translateX(250%);
+    transition: 0.3s;
+    position: fixed;
+    top: 81px;
+    right: 0;
+    padding-top: 30px;
+    padding-left: 0px 20px;
+    max-width: 320px;
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+
+  .sidebar {
+    transform: translateX(0);
+    right: 0;
+  }
+
+  .mobileButton {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+
+  .icon {
+    display: block;
+    cursor: pointer;
+    color: var(--Primitive-0);
+    font-size: 28px;
+  }
+}

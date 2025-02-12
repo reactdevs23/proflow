@@ -1,29 +1,21 @@
 .tabs {
-  border-radius: 6px;
-  background: var(--Primitive-900);
   display: flex;
-
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2px;
+  gap: 6px;
 }
-.buySell {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background: var(--Primitive-950);
-  border: 1px soilid var(--Primitive-950);
-}
+
 .tab {
-  color: var(--Primitive-400);
+  color: var(--Primitive-0);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
   border-radius: 6px;
-
-  box-shadow: 1px 1px 2px 0px rgba(14, 15, 57, 0.04);
+  background: var(--Primitive-Light-6);
   padding: 8px 20px;
-  background: transparent;
+  white-space: nowrap;
   cursor: pointer;
 }
 .tab:hover {
@@ -35,7 +27,7 @@
 
 .activeTab {
   background: var(--Primitive-Default);
-  color: var(--Primitive-950);
+  color: var(--Primitive-0);
 }
 .activeSell.activeTab {
   background: rgba(220, 73, 73, 0.08);

@@ -45,7 +45,7 @@ const Navbar = () => {
           onClick={() => setSidebar((prev) => !prev)}
         >
           {" "}
-          <img src={logo} alt="#" className={classes.logo} />
+          <img src={logo} alt="Proflow" className={classes.logo} />
         </NavLink>
 
         <nav
@@ -66,7 +66,7 @@ const Navbar = () => {
               {navItem}
             </NavLink>
           ))}
-          <Button glow base>
+          <Button glow base to="sign-up">
             Sign Up for Free
           </Button>
         </nav>

@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 32px;
+  margin-top: auto;
 }
 
 .legendContainer {
@@ -43,9 +44,16 @@
 .item .value {
   opacity: 0.8;
 }
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
 @media only screen and (max-width: 520px) {
   .wrapper {
     flex-direction: column;
+    gap: 15px;
   }
   .legendContainer {
     display: flex;

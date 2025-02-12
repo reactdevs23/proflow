@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import classes from "./Tabs.module.css";
 import clsx from "clsx";
 
-const Tabs = ({ tabs, activeTab, setActiveTab, className, buySell }) => {
+const Tabs = ({
+  tabs,
+  activeTab,
+  setActiveTab,
+  className,
+  buySell,
+  onClick,
+}) => {
   return (
-    <div className={clsx(classes.tabs, className, buySell && classes.buySell)}>
+    <div
+      className={clsx(classes.tabs, className, buySell && classes.buySell)}
+      onClick={onClick ? onClick : null}
+    >
       {tabs.map((tab, i) => (
         <button
           className={clsx(

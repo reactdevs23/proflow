@@ -42,6 +42,7 @@ const PowerfulAutomation = () => {
         "container",
         "sectionPadding"
       )}
+      data-aos="fade-up"
     >
       <Header
         center

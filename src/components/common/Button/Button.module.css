@@ -1,7 +1,7 @@
 .button {
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 100%;
   letter-spacing: 0.96px;
   display: flex;
@@ -9,9 +9,9 @@
   align-items: center;
   gap: 10px;
   text-transform: uppercase;
-  padding: 12px 24px;
+  padding: 12px 20px;
   background: var(--Primitive-Default);
-  color: var(--Primitive-0);
+  color: rgb(255, 255, 255, 0.9);
   cursor: pointer;
   white-space: nowrap;
   border-radius: 999px;
@@ -19,6 +19,10 @@
   background: linear-gradient(180deg, #fd8e3d 0%, #fd572d 100%);
   box-shadow: 0px 0px 32px 0px rgba(253, 139, 61, 0.5),
     0px 0px 32px 0px rgba(253, 139, 61, 0.5) inset;
+  transition: 0.3s ease;
+}
+.button:hover {
+  transform: translateY(-3px);
 }
 .radiusSm {
   border-radius: 8px;
@@ -37,7 +41,7 @@
 }
 .base {
   font-size: 14px;
-  padding: 10px 15px;
+  padding: 12px 15px;
 }
 .lg {
   font-size: 18px;

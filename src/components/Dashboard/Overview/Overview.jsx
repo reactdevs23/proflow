@@ -63,7 +63,7 @@ const Overview = () => {
             </Text>
           </div>
         </div>
-        <Button radiusSm base>
+        <Button radiusSm className={classes.button}>
           Create New Miner
         </Button>
       </div>
