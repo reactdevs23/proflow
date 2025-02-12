@@ -18,7 +18,7 @@ const GetStarted = () => {
           <Text lg opacity50 className={classes.info}>
             We want every business to unlock its full potential
           </Text>
-          <Button className={classes.button} to="sign-up">
+          <Button base className={classes.button} to="sign-up">
             Sign Up for Free
           </Button>
         </div>
