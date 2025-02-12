@@ -43,7 +43,7 @@ const TrustedPartners = () => {
       <Text lg opacity50 textCenter data-aos="fade-up">
         Trusted by companies worldwide
       </Text>
-      <div className={classes.partners} data-aos="fade-up">
+      <div className={classes.partners} data-aos="fade-up" data-aos-delay="500">
         {partners
           .slice(startIndex, startIndex + itemsPerPage)
           .map((partner, i) => (
