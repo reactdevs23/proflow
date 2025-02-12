@@ -6,7 +6,7 @@ import { getStartImg } from "images";
 
 const GetStarted = () => {
   return (
-    <section className="sectionPadding" data-aos="fade-up">
+    <section className="sectionPadding">
       <div className={clsx(classes.container, "container pattern  ")}>
         <div className={classes.infoContainer}>
           <Text lg primitiveDefault className={classes.title}>

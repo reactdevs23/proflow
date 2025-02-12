@@ -23,7 +23,6 @@ const HowItWorks = () => {
   ];
   return (
     <section
-      data-aos="fade-up"
       className={clsx(classes.container, "container pattern", "sectionPadding")}
     >
       <div className={classes.stepsContainer}>

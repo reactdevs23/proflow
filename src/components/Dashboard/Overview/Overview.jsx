@@ -16,7 +16,7 @@ const Overview = () => {
   };
   const amount = splitNumberParts(info.currentBalance.amount);
   return (
-    <div className={classes.container} data-aos="fade-up">
+    <div className={classes.container}>
       <div className={classes.header}>
         <Heading medium lg>
           Overview

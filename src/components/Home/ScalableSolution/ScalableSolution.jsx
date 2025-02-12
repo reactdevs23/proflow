@@ -34,7 +34,6 @@ const ScalableSolution = () => {
   ];
   return (
     <section
-      data-aos="fade-up"
       className={clsx(
         classes.container,
         "pattern",

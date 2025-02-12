@@ -45,7 +45,6 @@ const BuilttoSimplify = () => {
   ];
   return (
     <section
-      data-aos="fade-up"
       className={clsx(
         classes.container,
         "pattern",

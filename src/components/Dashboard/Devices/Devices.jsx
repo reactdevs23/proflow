@@ -11,7 +11,7 @@ const Devices = () => {
     { name: "Mobile", value: 31.0 },
   ];
   return (
-    <div className={classes.container} data-aos="fade-up">
+    <div className={classes.container}>
       <div className={classes.header}>
         <Heading medium lg>
           Devices
